@@ -21,7 +21,7 @@ def create_turtle(shape, color, x, y):
 
 turtles = [
     create_turtle("turtle", COLORS[i], -238, -100 + i * 50)
-    for i in range(5)
+    for i in range(len(COLORS))
 ]
 screen.setup(width=500, height=400)
 
@@ -40,5 +40,5 @@ turtle.goto(0, 0)
 if winning_turtle == user_bet:
     turtle.write(f"You Won! The winning color is {winning_turtle}", align="center", font=("Arial", 16, "normal"))
 else:
-    turtle.write("You Lost! The winning color is {winning_turtle}", align="center", font=("Arial", 16, "normal"))
+    turtle.write(f"You Lost! The winning color is {winning_turtle}", align="center", font=("Arial", 16, "normal"))
 screen.exitonclick()
