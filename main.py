@@ -8,7 +8,7 @@ is_race_on = False
 
 user_bet = screen.textinput(title="Make your bet", prompt="Which turtle will win? Enter a color: ").lower()
 turtles_list = []
-
+winning_turtle = ""
 
 def create_turtle(shape, color, x, y):
     t = turtle.Turtle(shape=shape)
@@ -24,7 +24,7 @@ turtles = [
     for i in range(5)
 ]
 screen.setup(width=500, height=400)
-winning_turtle = ""
+
 if user_bet:
     is_race_on = True
 
